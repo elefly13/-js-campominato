@@ -31,17 +31,38 @@ console.log(myArrayBombe.sort());
 
 
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
-var numeroGiocatore = parseInt(prompt("Inserisci un numero tra 1 e 100"));
-console.log(numeroGiocatore);
+// var numeroGiocatore = parseInt(prompt("Inserisci un numero tra 1 e 100"));
+// console.log(numeroGiocatore);
 
-// var arrayNumGiocatore = [];
+var arrayNumGiocatore = [];
+
+for (var i = 0; i < 5; i++) {
+    var numeroGiocatore = parseInt(prompt("Inserisci un numero tra 1 e 100"));
+
+    // L’utente non può inserire più volte lo stesso numero.
+   if (existInArray(arrayNumGiocatore, numeroGiocatore) == false) {
+        arrayNumGiocatore.push(numeroGiocatore);
+    }  
+    
+}
+console.log(arrayNumGiocatore);
 
 
+var controlloNumero = false;
+for (var i = 0; i < myArrayBombe.length; i++) {
+    if (numeroGiocatore == myArrayBombe[i]) {
+        controlloNumero = true
+        
+    }
+}
+if (controlloNumero == true) {
+    console.log("hai perso");
+}
+else {
+    console.log("hai vinto");
+}
 
 
-
-
-// L’utente non può inserire più volte lo stesso numero.
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.
 // La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
