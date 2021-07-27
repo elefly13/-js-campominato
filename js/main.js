@@ -62,10 +62,35 @@ else if (possibilita = 100 - numBombe) {
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 alert(" Hai totalizzato punti: " + arrayNumGiocatore.length);
 
+// fine sezione logica gioco 
 
+// sezione funzioni per la grafica
 
+function creaCampo(celle) {
+    for (let i = 2; i <= celle; i++) {
+        let cella = `
+             <div data-cella = ${i} class="cella"></div>
+        `;
 
+        let templateCella = document.createElement('DIV');
+        templateCella.classList.add("quadrato");
+        templateCella.innerHTML = cella;
+        document.getElementById('campo').appendChild(templateCella);
 
+    }
+}
+
+document.getElementById('campo').addEventListener('click',
+
+    function (e) { //e = event
+        console.log(e.target.dataset.cella);
+        let element = document.querySelectorAll("[data-cella='" + e.target.dataset.cella + "']");
+        console.log(element[0]);
+        element[0].classList.add("red");
+    }
+)
+
+creaCampo(100);
 
 
 

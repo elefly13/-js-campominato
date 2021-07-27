@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+#campo {
+    width: 50vw;
+    height: 50vw;
+    margin: auto;
+   
+}
+.quadrato {
+    width: calc(50vw/10);
+    height: calc(50vw/10);
+    float: left;
+    background-color: yellow;
+}
+.cella {
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray
+
+}
+.red {
+    background-color: red;
+}
