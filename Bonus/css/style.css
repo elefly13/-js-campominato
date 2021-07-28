@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 #campo {
-    width: 40vw;
-    height: 40vw;
+    width: 30vw;
+    height: 30vw;
     margin: auto;
    
 }
 .quadrato {
-    width: calc(40vw/10);
-    height: calc(40vw/10);
+    width: calc(30vw/10);
+    height: calc(30vw/10);
     float: left;
-    background-color: yellow;
+    background-color: lightgreen;
 }
 .cella {
     width: 100%;
@@ -26,15 +26,27 @@
     background-size: cover;
 }
 .green {
-    background-color: green;
+    background-color: gainsboro;
 }
 h1 {
     padding: 20px;
     text-align: center;
 }
 .box {
+    display: flex;
     width: 40vw;
     margin: auto;
     padding: 20px;
+    align-items: center;
+    justify-content: space-around;
 
+}
+.boxAlert {
+    width: 40vw;
+    height: 2vw;
+    
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    line-height: 2vw;
 }

@@ -5,28 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Campo Minato</title>
+    <title>Passeggiata al parco</title>
 </head>
 <body>
-    <h1>Non calpestare le aiuole! </h1>
+    <h1>Vietato calpestare le aiuole</h1>
+    <div class="boxAlert">
+        <h2 id="attento"></h2>
+    </div>
+
     <div class="box">
-        <label for="Fascia-eta">Seleziona la difficoltà del gioco</label>
-        <select name="livelloGioco" id="livelloGioco" >
-           
-            <option value="facile">livello facile</option>
-            <option value="medio">livello medio</option>
-            <option value="difficile">livello difficile</option>
-        </select>
-        <div class="box_bottoni">
-            <button id="gioca" class="btn">Gioca</button>
+        <div class="box1">
+            <label for="Fascia-eta">Seleziona la difficoltà del gioco</label>
+            <select name="livelloGioco" id="livelloGioco" >
+                <option value="facile">livello facile</option>
+                <option value="medio">livello medio</option>
+                <option value="difficile">livello difficile</option>
+            </select>
             
+            <button id="gioca" class="btn">Gioca</button>
         </div>
+        
+        <button id="nuovaPartita" class="btn">Nuova partita</button>
+    
+        <h4 id="punti"></h4>
     </div>
 
     <div id="campo">
       
     </div>
-
+   
 
     <script src="js/main.js"></script>
 </body>

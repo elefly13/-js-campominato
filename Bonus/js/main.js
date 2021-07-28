@@ -114,13 +114,20 @@ document.getElementById('campo').addEventListener('click',
         // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all’utente un altro numero.    
         // La partita termina quando il giocatore inserisce un numero “vietato”
         if (bombaTrovata == true) {
-            alert("bomba esplosa hai perso");
+            document.getElementById('attento').innerHTML = "ATTENTO HAI CALPESTATO I FIORI!";
+            attento.style.backgroundColor = "red";
+
              // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
-            alert(" Hai totalizzato punti: " + arrayNumGiocatore.length);
+            // alert(" Hai totalizzato punti: " + arrayNumGiocatore.length);
+            document.getElementById('punti').innerHTML = " Hai totalizzato punti: " + arrayNumGiocatore.length;
+            punti.style.backgroundColor = "lightgray";
+        }
+        else if (bombaTrovata == false) {
+            document.getElementById('attento').innerHTML = "";
         }
         // o raggiunge il numero massimo possibile di numeri consentiti.
         else if (possibilita == arrayNumGiocatore.length) {
-            alert("sei una bomba hai vinto");
+            alert("Hai vinto! Bravo continua a rispettare la natura");
         }
        
 
@@ -138,14 +145,28 @@ btnGenera.addEventListener('click',
    function () {
         var livelloGioco = document.getElementById('livelloGioco').value;
         if (livelloGioco == "facile") {
-            creaCampo(100);
+            return creaCampo(100);
         }
         else if (livelloGioco == "medio"){
-            creaCampo(80);
+            return creaCampo(80);
+            
         }
         else if (livelloGioco == "difficile"){
-            creaCampo(50);
+            return creaCampo(50);
         }
    }
    
+)
+
+// ricomincio una nuova partita
+
+var btnNuovaPartita = document.getElementById('nuovaPartita');
+
+btnNuovaPartita.addEventListener('click',
+    
+        function () {
+            location.reload();
+            // campo.innerHTML = "";
+            // document.getElementById('punti').innerHTML = " " ;
+        }
 )
