@@ -127,8 +127,25 @@ document.getElementById('campo').addEventListener('click',
     }
 )
 
-creaCampo(100);
 
 
 
- 
+// seleziono il livello del gioco e creo il campo 
+
+var btnGenera = document.getElementById('gioca');
+
+btnGenera.addEventListener('click',
+   function () {
+        var livelloGioco = document.getElementById('livelloGioco').value;
+        if (livelloGioco == "facile") {
+            creaCampo(100);
+        }
+        else if (livelloGioco == "medio"){
+            creaCampo(80);
+        }
+        else if (livelloGioco == "difficile"){
+            creaCampo(50);
+        }
+   }
+   
+)

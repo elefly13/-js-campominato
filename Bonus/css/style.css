@@ -33,5 +33,8 @@ h1 {
     text-align: center;
 }
 .box {
-    
+    width: 40vw;
+    margin: auto;
+    padding: 20px;
+
 }
